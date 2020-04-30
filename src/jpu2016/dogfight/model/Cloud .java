@@ -3,8 +3,8 @@ package jpu2016.dogfight.model;
 import javax.swing.text.Position;
 
 public class Cloud extends Mobile {
-
 	
+
 	int SPEED = 1;
 	int WIDTH = 300;
 	int HEIGHT = 150 ;

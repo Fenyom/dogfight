@@ -13,6 +13,7 @@ public class Sky implements IArea {
 	public Sky (Dimension dimension){
 		
 	}
+
 	
 	public Image getImage(){
 		return null;

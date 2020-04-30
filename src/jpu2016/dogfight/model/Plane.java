@@ -13,6 +13,7 @@ public class Plane extends Mobile {
 		super(direction, position, dimension, speed, image);
 		// TODO Auto-generated constructor stub
 	}
+
 	
 	public boolean isPlayer(int player){
 		return false;
