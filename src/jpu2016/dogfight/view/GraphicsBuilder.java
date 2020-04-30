@@ -1,6 +1,6 @@
 package jpu2016.dogfight.view;
 
-import jpu2016.dogfight.model.Imobile;
+import jpu2016.dogfight.model.IMobile;
 import jpu2016.dogfight.gameframe.IGraphicsBuilder;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -29,10 +29,11 @@ public class GraphicsBuilder {
 	}
 	
 	public int getGlobalWidth() {
-		
+		return 0;
 	}
 	
 	public int getGlobalHeight() {
+		return 0;
 		
 	}
 }

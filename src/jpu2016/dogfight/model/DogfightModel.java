@@ -1,9 +1,10 @@
 package jpu2016.dogfight.model;
 
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.Observable;
 
-import dogfight.view.GraphicsBuilder;
+import jpu2016.dogfight.view.GraphicsBuilder;
 
 public class DogfightModel extends Observable implements IDogfightModel {
 	
@@ -56,12 +57,4 @@ public class DogfightModel extends Observable implements IDogfightModel {
 		// TODO Auto-generated method stub
 		
 	}
-
-	@Override
-	public void setGraphicsBuilder(GraphicsBuilder graphicsBuilder) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
 }

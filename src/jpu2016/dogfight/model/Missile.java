@@ -1,19 +1,21 @@
 package jpu2016.dogfight.model;
 
+import java.awt.Dimension;
+
 import javax.swing.text.Position;
 
 public class Missile extends Mobile {
 	
-	int SPEED = 4;
-	int WIDTH = 30;
-	int HEIGHT = 10 ;
-	int MAX_DISTANCE_TRAVELED = 1400;
-	String IMAGE = "Missile";
-	int distance_traveled = 0 ;
-	
+	private static int SPEED = 4;
+	private static int WIDTH = 30;
+	private static int HEIGHT = 10 ;
+	private static int MAX_DISTANCE_TRAVELED = 1400;
+	private static String IMAGE = "Missile";
+	private static int distance_traveled = 0 ;
+	private static Position position;
 
-	public Missile(Direction direction, Position position, Dimension dimension, int speed, String image) {
-		super(direction, position, dimension, speed, image);
+	public Missile(Direction direction, Dimension dimension) {
+		super(direction, position, dimension, SPEED, IMAGE);
 		// TODO Auto-generated constructor stub
 	}
 	
