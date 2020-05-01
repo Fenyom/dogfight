@@ -11,6 +11,7 @@ public class GameFrame extends JFrame implements KeyListener{
 	IGraphicsBuilder graphicBuilder;
 	Observable observable;
 	public GameFrame(String title, IEventPerformer performer, IGraphicsBuilder graphicBuilder, Observable observable) {
+		JFrame jeu = new JFrame();
 		this.setTitle(title);
 		this.setSize(1240, 1240);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
