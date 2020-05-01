@@ -1,5 +1,6 @@
 package jpu2016.dogfight.model;
 
+import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Point;
 
@@ -32,6 +33,8 @@ public interface IMobile {
 	public boolean hit();
 	
 	public boolean isWeapon();
+
+	void setDogfightModel(DogfightModel dogfightModel);
 	
 	void setDogfightModel(DogfightModel dogfightModel) ;
 	

@@ -1,6 +1,7 @@
 package jpu2016.dogfight.model;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Point;
 
@@ -11,12 +12,13 @@ public class Mobile implements IMobile {
 	protected Dimension dimension;
 	protected Direction direction;
 	protected Position position ;
+	protected Image image;
+	private int speed;
 	
 	
+	public  Mobile(Direction direction , Position position , Dimension dimension , int speed , String image){
 	
-public  Mobile(Direction direction , Position position , Dimension dimension , int speed , String image){
-	
-}
+	}
 
 	@Override
 	public Direction getDirection() {
@@ -32,7 +34,6 @@ public  Mobile(Direction direction , Position position , Dimension dimension , i
 
 	@Override
 	public Point getPosition() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
