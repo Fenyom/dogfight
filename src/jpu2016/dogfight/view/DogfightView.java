@@ -6,7 +6,7 @@ import jpu2016.dogfight.view.IViewSystem;
 import java.lang.Runnable;
 import java.util.Observable;
 
-public class DogfightView {
+public class DogfightView implements IViewSystem {
 	private EventPerformer EventPerformer;
 	private GraphicsBuilder GraphicsBuilder;
 	
