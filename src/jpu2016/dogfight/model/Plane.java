@@ -12,17 +12,18 @@ public class Plane extends Mobile {
 	private static Position position;
 	
 	public Plane(Direction direction, Dimension dimension, String image) {
-		super(direction,position,dimension,SPEED,image);
-		// TODO Auto-generated constructor stub
+		super(direction, position, new Dimension(WIDTH, HEIGHT), SPEED, image);
+		this.player = player;
 	}
 
 	
 	public boolean isPlayer(int player){
-		return false;
+		return player == this.player ;
 		
 	}
 	
 	public boolean hit(){
+		this.getDogfightModel().removeMobile((IMobile) this);
 		return true;
 		
 	}

@@ -5,13 +5,14 @@ import java.awt.Image;
 public class Sky implements IArea {
 	
 	protected Dimension dimension;
+	protected Image image;
 
 	public Dimension getDimension() {
-		return dimension;
+		return null;
 	}
 	
 	public Sky (Dimension dimension){
-		
+		this.dimension = dimension;
 	}
 
 	

@@ -20,21 +20,32 @@ public class Missile extends Mobile {
 	}
 	
 	public int getWidthWithADirection(Direction direction){
-		return HEIGHT;
+		if (direction == Direction.UP || direction == Direction.DOWN) {
+			return WIDTH;
+		} else {
+			return HEIGHT;
+		}	
 		
 	}
 	
 	public int getHeightithADirection(Direction direction){
-		return HEIGHT;
+		if (direction == Direction.UP || direction == Direction.DOWN) {
+			return HEIGHT;
+		} else {
+			return WIDTH;
+		}
 		
 	}
 	
 	public void move(){
-		
+		this.distanceTraveled += this.getSpeed();
+		if (this.distanceTraveled > MAX_DISTANCE_TRAVELED) {
+			this.getDogfightModel().removeMobile((IMobile) this);
+		}
 	}
 
 	public boolean isWeapon(){
-		return false;
+		return true;
 		
 	}
 }
