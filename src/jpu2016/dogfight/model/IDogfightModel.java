@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public interface IDogfightModel {
 	
-	public IArea getIArea();
+	public IArea getArea();
 
 	public void buildArea(Dimension dimension);
 	
