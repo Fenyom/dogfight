@@ -1,9 +1,5 @@
 package jpu2016.dogfight.model;
 
-import java.awt.Dimension;
-
-import javax.swing.text.Position;
-
 public class Missile extends Mobile {
 	
 	private static int SPEED = 4;
@@ -11,7 +7,7 @@ public class Missile extends Mobile {
 	private static int HEIGHT = 10 ;
 	private static int MAX_DISTANCE_TRAVELED = 1400;
 	private static String IMAGE = "Missile";
-	private static int distance_traveled = 0 ;
+	private  int distanceTraveled = 0 ;
 	private static Position position;
 
 	public Missile(Direction direction, Dimension dimension) {
@@ -38,6 +34,7 @@ public class Missile extends Mobile {
 	}
 	
 	public void move(){
+		
 		this.distanceTraveled += this.getSpeed();
 		if (this.distanceTraveled > MAX_DISTANCE_TRAVELED) {
 			this.getDogfightModel().removeMobile((IMobile) this);

@@ -37,7 +37,7 @@ public class Position {
 		return y;
 	}
 	
-	public void setY(){
+	public void setY(double y){
 		if (y > this.maxY) {
 			this.y = y - this.maxY;
 		} else if (y < 0) {
@@ -49,7 +49,7 @@ public class Position {
 		this.maxX = maxX;
 	}
 	
-	protected void setY(double MaxY){
+	protected void setMaxY(double MaxY){
 		this.maxY = maxY;
 	}
 	

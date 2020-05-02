@@ -1,7 +1,6 @@
 package jpu2016.dogfight.model;
 
-import java.awt.Dimension;
-import javax.swing.text.Position;
+
 
 public class Cloud extends Mobile {
 	

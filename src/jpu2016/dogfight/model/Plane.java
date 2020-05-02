@@ -1,7 +1,5 @@
 package jpu2016.dogfight.model;
 
-import java.awt.Dimension;
-import javax.swing.text.Position;
 
 public class Plane extends Mobile {
 	
@@ -13,6 +11,7 @@ public class Plane extends Mobile {
 	
 	public Plane(Direction direction, Dimension dimension, String image) {
 		super(direction, position, new Dimension(WIDTH, HEIGHT), SPEED, image);
+		
 		this.player = player;
 	}
 

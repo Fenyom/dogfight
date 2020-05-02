@@ -1,27 +1,26 @@
 package jpu2016.dogfight.model;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Image;
-import java.awt.Point;
 
-import javax.swing.text.Position;
 
-public class Mobile implements IMobile {
+public class Mobile  implements IMobile {
 	
 	protected Dimension dimension;
 	protected Direction direction;
 	protected Position position ;
-	protected Image image;
+	protected String image;
 	private int speed;
+	protected IDogfightModel dogfightModel;
 	
 	
 	public  Mobile(Direction direction , Position position , Dimension dimension , int speed , String image){
+		
 		this.setDirection(direction) ;
 		this.position = position ;
 		this.dimension = dimension ;
 		this.speed = speed ;
-		this.images = new ArrayList<Image>() ;
+		this.image = image ;
 	}
 
 	@Override
@@ -36,8 +35,9 @@ public class Mobile implements IMobile {
 		this.direction = direction;
 	}
 
-	@Override
-	public Position getPosition() {
+	
+	public Position getPosition(){
+		
 		return position;
 	}
 
@@ -101,7 +101,7 @@ public class Mobile implements IMobile {
 }
 	
 	public Color getColor(){
-		return new Color(255,255,255);;
+		return new Color(255,255,255);
 		
 	}
 	
@@ -121,9 +121,8 @@ public class Mobile implements IMobile {
 	
 	
 	public IDogfightModel getDogfightModel() {
-		return  this.dogfightModel;
-	
 		
+		return  this.dogfightModel;	
 	}
 
 	

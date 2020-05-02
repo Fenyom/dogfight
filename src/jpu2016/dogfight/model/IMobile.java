@@ -1,8 +1,7 @@
 package jpu2016.dogfight.model;
 
-import java.awt.Dimension;
 import java.awt.Image;
-import java.awt.Point;
+
 
 public interface IMobile {
 	
@@ -10,7 +9,7 @@ public interface IMobile {
 
 	public void setDirection (Direction direction);
 	
-	public Point getPosition();
+	public Position getPosition();
 	
 	public Dimension getDimension();
 
@@ -34,9 +33,8 @@ public interface IMobile {
 	
 	public boolean isWeapon();
 
-	void setDogfightModel(DogfightModel dogfightModel);
+	public void setDogfightModel(DogfightModel dogfightModel);
 	
-	void setDogfightModel(DogfightModel dogfightModel) ;
 	
 	
 	
