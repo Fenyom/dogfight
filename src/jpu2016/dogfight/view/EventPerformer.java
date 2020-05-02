@@ -2,13 +2,14 @@ package jpu2016.dogfight.view;
 
 import java.awt.event.KeyEvent;
 import jpu2016.dogfight.gameframe.IEventPerformer;
+import jpu2016.dogfight.controller.IOrderPerformer;
 import jpu2016.dogfight.controller.UserOrder;
 
 public class EventPerformer {
-	UserOrder UserOrder;
+	IOrderPerformer orderPerformer;
 
-	public EventPerformer() {
-		
+	public EventPerformer(IOrderPerformer orderPerformer) {
+		this.orderPerformer = orderPerformer;
 	}
 	
 	public void eventPerform(KeyEvent keyCode) {
@@ -16,6 +17,7 @@ public class EventPerformer {
 	}
 	
 	private UserOrder keyCodeToUserOrder(int keyCode) {
-		return this.UserOrder;
+		UserOrder userOrder = new UserOrder(keyCode, null);
+		return userOrder;
 	}
 }

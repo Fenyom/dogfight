@@ -11,7 +11,7 @@ public class DogfightView implements IViewSystem {
 	private GraphicsBuilder GraphicsBuilder;
 	
 	public DogfightView(IOrderPerformer orderPerformer, IDogfightModel dogfightModel, Observable observable) {
-		EventPerformer = new EventPerformer();
+		
 	}
 	
 	private void run() {

@@ -7,10 +7,10 @@ import java.util.Observer;
 import javax.swing.JPanel;
 
 public class GamePanel extends JPanel{
-	private IGraphicsBuilder IGraphicsBuilder;
+	private IGraphicsBuilder graphicsBuilder;
 	
 	public GamePanel(IGraphicsBuilder graphicBuilder) {
-		
+		this.graphicsBuilder = graphicsBuilder;
 	}
 	
 	public void update(Observable observable) {
