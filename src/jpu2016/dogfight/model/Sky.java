@@ -8,17 +8,16 @@ public class Sky implements IArea {
 	protected Image image;
 
 	public Dimension getDimension() {
-		return null;
+		return dimension;
 	}
 	
 	public Sky (Dimension dimension){
+		
 		this.dimension = dimension;
 	}
 
-	
-	public Image getImage(){
-		return null;
-		
+	public Image getImage() {
+		return image;
 	}
-
+	
 }
