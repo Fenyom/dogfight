@@ -116,7 +116,7 @@ public class Mobile  implements IMobile {
 	@Override
 	public boolean isPlayer(int player) {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	
 	

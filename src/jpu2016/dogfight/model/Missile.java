@@ -42,7 +42,6 @@ public class Missile extends Mobile {
 	}
 
 	public boolean isWeapon(){
-		return true;
-		
-	}
+		return false;
+		}
 }

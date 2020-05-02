@@ -51,7 +51,10 @@ public class DogfightModel extends Observable implements IDogfightModel {
 	public IMobile getMobileByPlayer(int player) {
 		// TODO Auto-generated method stub
 		for (final IMobile mobile : this.getMobiles()) {
-			if (mobile.isPlayer(player)) { return mobile; }
+			
+			if (mobile.isPlayer(player)) { 
+				
+				return mobile; }
 		}
 		return null;
 	}
@@ -59,7 +62,9 @@ public class DogfightModel extends Observable implements IDogfightModel {
 	@Override
 	public void setMobilesHavesMoved() {
 		// TODO Auto-generated method stub
-		
+		for (IMobile mobile : this.getMobiles()) {
+			mobile.move();
+		}
 	}
 	
 	

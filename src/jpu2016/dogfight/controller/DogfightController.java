@@ -18,6 +18,8 @@ public class DogfightController implements IOrderPerformer{
 		
 		public void play() {
 			
+			gameLoop();
+			viewSystem.displayMessage("Partie terminée");
 		}
 
 		public void setViewSystem(IViewSystem viewSystem) {
@@ -30,6 +32,10 @@ public class DogfightController implements IOrderPerformer{
 		
 		private void gameLoop() {
 			
+			while(true) {
+				
+				dogfightModel.setMobilesHavesMoved();
+			}
 		}
 		
 }
