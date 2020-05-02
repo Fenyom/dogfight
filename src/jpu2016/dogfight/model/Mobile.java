@@ -1,64 +1,68 @@
 package jpu2016.dogfight.model;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Image;
-import java.awt.Point;
 
-import javax.swing.text.Position;
 
-public class Mobile implements IMobile {
+public class Mobile  implements IMobile {
 	
 	protected Dimension dimension;
 	protected Direction direction;
 	protected Position position ;
-	protected Image image;
+	protected String image;
 	private int speed;
+	protected IDogfightModel dogfightModel;
 	
 	
 	public  Mobile(Direction direction , Position position , Dimension dimension , int speed , String image){
-	
+		
+		this.setDirection(direction) ;
+		this.position = position ;
+		this.dimension = dimension ;
+		this.speed = speed ;
+		this.image = image ;
 	}
 
 	@Override
 	public Direction getDirection() {
 		// TODO Auto-generated method stub
-		return null;
+		return direction;
 	}
 
 	@Override
 	public void setDirection(Direction direction) {
 		// TODO Auto-generated method stub
-		
+		this.direction = direction;
 	}
 
-	@Override
-	public Point getPosition() {
-		return null;
+	
+	public Position getPosition(){
+		
+		return position;
 	}
 
 	@Override
 	public Dimension getDimension() {
 		// TODO Auto-generated method stub
-		return null;
+		return dimension;
 	}
 
 	@Override
 	public int getWidth() {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.dimension.getWidth() ;
 	}
 
 	@Override
 	public int getHeight() {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.dimension.getHeight();
 	}
 
 	@Override
 	public int getSpeed() {
 		// TODO Auto-generated method stub
-		return 0;
+		return speed;
 	}
 
 	@Override
@@ -70,25 +74,34 @@ public class Mobile implements IMobile {
 	@Override
 	public void move() {
 		// TODO Auto-generated method stub
-		
+		switch (this.getDirection()) {
+		case UP : this.moveUp(); break;
+		case DOWN : this.moveDown(); break;
+		case LEFT : this.moveLeft(); break;
+		case RIGHT : this.moveRight(); break;
+	}	
 	}
 	
 	public void moveRight() {
-		
+		Position pos = this.getPosition();
+		pos.setX(pos.getX() + this.getSpeed());
 	}
 	
 	public void moveUp() {
-		
+		Position pos = this.getPosition();
+		pos.setY(pos.getY() - this.getSpeed());
 	}
 	public void moveDown() {
-	
+		Position pos = this.getPosition();
+		pos.setY(pos.getY() + this.getSpeed());
 }
 	public void moveLeft() {
-	
+		Position pos = this.getPosition();
+		pos.setX(pos.getX() - this.getSpeed());
 }
 	
 	public Color getColor(){
-		return null;
+		return new Color(255,255,255);
 		
 	}
 	
@@ -108,9 +121,8 @@ public class Mobile implements IMobile {
 	
 	
 	public IDogfightModel getDogfightModel() {
-		return null;
-	
 		
+		return  this.dogfightModel;	
 	}
 
 	
@@ -129,7 +141,7 @@ public class Mobile implements IMobile {
 	@Override
 	public void setDogfightModel(DogfightModel dogfightModel) {
 		// TODO Auto-generated method stub
-		
+		this.dogfightModel = dogfightModel;
 	}
 
 }

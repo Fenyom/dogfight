@@ -2,6 +2,7 @@ package Default;
 import jpu2016.dogfight.controller.*;
 import jpu2016.dogfight.model.*;
 import jpu2016.dogfight.view.*;
+import jpu2016.dogfight.gameframe.*;
 
 public class Main {
 
